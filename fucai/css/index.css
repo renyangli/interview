@@ -1,0 +1,615 @@
+@charset "UTF-8";
+/*reset style*/
+* {
+  margin: 0;
+  padding-top: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+}
+
+html {
+  color: #000;
+  background: #FFF;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  /*避免ios和wp上click的300ms的延迟*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+/*@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}*/
+body {
+  -webkit-overflow-scrolling: touch;
+  /*增加overflow scroll的动画效果*/
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/*tap-highlight-color*/
+a,
+button,
+input {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+del,
+ins {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: baseline;
+}
+
+sub {
+  vertical-align: baseline;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  /*font-size: inherit;*/
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input,
+button,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+/*****font*****/
+/*common*/
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.div-line {
+  height: 1px;
+  background: #DDDDDD;
+}
+
+.b-left-1 {
+  border-left: 1px solid #DDDDDD !important;
+}
+
+.p-left-24 {
+  padding-left: 1.2rem !important;
+}
+
+/*购票大厅*/
+.wrap-hall {
+  background: #F1F2F6;
+  width: 100%;
+  /*overflow: hidden;*/
+}
+.wrap-hall > header {
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  line-height: 4rem;
+  background: #C91717;
+}
+.wrap-hall > header > h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+.wrap-hall > section {
+  padding-bottom: 10rem;
+}
+.wrap-hall > section .radio {
+  width: 100%;
+  height: 3rem;
+  padding: 0 3.5rem;
+  line-height: 3rem;
+  color: #303135;
+  font-size: 1.2rem;
+  background: url(../img/Speaker.png) no-repeat #fff left;
+  background-position: 1rem;
+}
+.wrap-hall > section .div-common {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem 0;
+  background: #fff;
+}
+.wrap-hall > section .div-common > h1 {
+  font-size: 1.2rem;
+  color: #516166;
+  background: url(../img/Heart.png) no-repeat #fff left;
+  padding-left: 1.2rem;
+}
+.wrap-hall > section .div-common .div-block {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 4.9rem;
+  margin: 1.5rem 0;
+  border: 1px solid #fff;
+}
+.wrap-hall > section .div-common .div-block .lottery-left-img {
+  position: absolute;
+  width: 4.9rem;
+}
+.wrap-hall > section .div-common .div-block .lottery-right-title {
+  padding-left: 5.5rem;
+}
+.wrap-hall > section .div-common .div-block .lottery-right-title > h1 {
+  font-size: 1.6rem;
+  color: #303135;
+  line-height: 2.5rem;
+  height: 2.5rem;
+}
+.wrap-hall > section .div-common .div-block .lottery-right-title > div {
+  font-size: 1.2rem;
+  color: #8e9399;
+}
+.wrap-hall > footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.wrap-hall > footer ul li {
+  width: 20%;
+  height: 5rem;
+  float: left;
+  text-align: center;
+  font-size: 1.2rem;
+  background: #fff;
+  padding-top: 0.5rem;
+}
+.wrap-hall > footer ul li > a div {
+  font-size: 1.2rem;
+  color: #CCCED2;
+}
+.wrap-hall > footer ul li .footer-selected {
+  color: #CB1717 !important;
+}
+.wrap-hall > footer ul li .nav-hall > img,
+.wrap-hall > footer ul li .nav-lottery > img,
+.wrap-hall > footer ul li .nav-found > img {
+  width: 2.5rem;
+}
+.wrap-hall > footer ul li .nav-personal > img {
+  height: 2.5rem;
+}
+.wrap-hall > footer ul li .nav-god-ring > img {
+  height: 3.5rem;
+}
+
+/*竞足*/
+.wrap-context-soccer {
+  background: #F2F2F2;
+  width: 100%;
+  height: auto;
+}
+.wrap-context-soccer > header {
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  line-height: 4rem;
+  background: #C91717;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.wrap-context-soccer > header .return {
+  position: absolute;
+  height: 1.6rem;
+  top: 1.2rem;
+  left: 1rem;
+}
+.wrap-context-soccer > header > h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+.wrap-context-soccer > header > h1 span,
+.wrap-context-soccer > header > h1 img {
+  vertical-align: middle;
+}
+.wrap-context-soccer > header > h1 img {
+  width: 1.1rem;
+  margin-left: 0.5rem;
+}
+.wrap-context-soccer > header .refresh {
+  position: absolute;
+  width: 1.6rem;
+  top: 1.2rem;
+  right: 3.4rem;
+}
+.wrap-context-soccer > header .list {
+  position: absolute;
+  width: 1.6rem;
+  top: 1.2rem;
+  right: 1rem;
+}
+.wrap-context-soccer > header .list-help {
+  display: none;
+  border-radius: 0.15rem;
+  background: #525252;
+  width: 11rem;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  color: #fff;
+}
+.wrap-context-soccer > header .list-help .line {
+  background: #666666;
+  height: 0.05rem;
+}
+.wrap-context-soccer > header .list-help .list-common {
+  padding-left: 1rem;
+  position: relative;
+  line-height: 4rem;
+  height: 4rem;
+}
+.wrap-context-soccer > header .list-help .list-common > img {
+  width: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+}
+.wrap-context-soccer > section {
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+}
+.wrap-context-soccer > section .list-date {
+  height: 2.4rem;
+  line-height: 2.4rem;
+  font-size: 1.2rem;
+  background: #fff;
+  text-align: center;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  color: #999999;
+}
+.wrap-context-soccer > section .list-date > span {
+  vertical-align: middle;
+}
+.wrap-context-soccer > section .list-date > img {
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.wrap-context-soccer > section .detail .list-detail {
+  padding: 1rem 1rem 1rem 7.5rem;
+  height: 9rem;
+  background: #F5FAFF;
+  position: relative;
+  border-bottom: 1px solid #DDDDDD;
+}
+.wrap-context-soccer > section .detail .list-detail .left {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  text-align: center;
+}
+.wrap-context-soccer > section .detail .list-detail .left > div {
+  font-size: 1.3rem;
+  color: #666666;
+  margin-top: 0.1rem;
+}
+.wrap-context-soccer > section .detail .list-detail .left > div:nth-child(1) {
+  font-size: 1.2rem;
+  color: #999999;
+  margin-top: 0.5rem;
+}
+.wrap-context-soccer > section .detail .list-detail .left > img {
+  width: 1rem;
+  padding: 0;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.wrap-context-soccer > section .detail .list-detail .right {
+  height: 100%;
+}
+.wrap-context-soccer > section .detail .list-detail .right table {
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+}
+.wrap-context-soccer > section .detail .list-detail .right table td {
+  border-left: 1px solid #DDDDDD;
+  border-top: 1px solid #DDDDDD;
+  color: #333333;
+}
+.wrap-context-soccer > section .detail .list-detail .right .vote-info {
+  height: 2rem;
+  line-height: 2rem;
+  color: #333333;
+}
+.wrap-context-soccer > section .detail .list-detail .right .vote-info > div:nth-child(1) {
+  float: left;
+  width: 30%;
+}
+.wrap-context-soccer > section .detail .list-detail .right .vote-info > div:nth-child(2) {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+.wrap-context-soccer > section .detail .list-detail .right .vote-info > div:nth-child(3) {
+  float: right;
+  width: 30%;
+  text-align: right;
+}
+.wrap-context-soccer > section .detail .list-detail .right > table {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+.wrap-context-soccer > section .detail .list-detail .right > table .action {
+  width: 4rem;
+  background: #00ABFA;
+  color: #fff;
+}
+.wrap-context-soccer > section .detail .list-detail .right > table .action span {
+  display: block;
+}
+.wrap-context-soccer > section .detail .list-detail .right > table td:nth-child(1) {
+  width: 1.5rem;
+  height: 2.25rem;
+}
+.wrap-context-soccer > section .detail .list-detail .right > table .green {
+  background: #A2FFBB;
+  color: #1BAA41;
+}
+.wrap-context-soccer > section .detail .list-detail .right > table .yellow {
+  background: #FBB23E;
+  color: #fff;
+}
+.wrap-context-soccer > section .detail .list-detail .right > table .gray {
+  background: #DDDDDD;
+  color: #fff;
+}
+.wrap-context-soccer > section .detail .list-detail .right > table .pink {
+  background: #FFC2C7;
+  color: #F50A1D;
+}
+.wrap-context-soccer > section .detail .record-detail {
+  width: 100%;
+  font-size: 1.3rem;
+  color: #666666;
+  background: #D9ECFF;
+}
+.wrap-context-soccer > section .detail .record-detail tr {
+  border-bottom: 1px solid #99CCFF;
+  line-height: 2.5rem;
+  height: 2.5rem;
+}
+.wrap-context-soccer > section .detail .record-detail tr:last-child {
+  border-bottom: 0;
+}
+.wrap-context-soccer > section .detail .record-detail td:nth-child(1) {
+  width: 8.5rem;
+  padding-left: 1rem;
+  color: #121212;
+}
+.wrap-context-soccer > section .detail .record-detail .history-fight {
+  text-align: center;
+  padding-right: 3rem;
+}
+.wrap-context-soccer > section .detail .record-detail .recent-fight {
+  padding-right: 3rem;
+}
+.wrap-context-soccer > section .detail .record-detail .recent-fight > span:nth-child(1) {
+  float: left;
+  width: 50%;
+  display: inline-block;
+  text-align: left;
+}
+.wrap-context-soccer > section .detail .record-detail .recent-fight > span:nth-child(2) {
+  float: right;
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+.wrap-context-soccer > section .detail .record-detail .average-fight {
+  width: 100%;
+  padding-right: 3rem;
+}
+.wrap-context-soccer > section .detail .record-detail .average-fight > span:nth-child(1) {
+  float: left;
+  width: 33%;
+  display: inline-block;
+  text-align: left;
+}
+.wrap-context-soccer > section .detail .record-detail .average-fight > span:nth-child(2) {
+  float: left;
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+}
+.wrap-context-soccer > section .detail .record-detail .average-fight > span:nth-child(3) {
+  float: left;
+  width: 34%;
+  display: inline-block;
+  text-align: right;
+}
+.wrap-context-soccer > footer {
+  background: #2F2C28;
+  width: 100%;
+  height: 4.5rem;
+  position: fixed;
+  bottom: 0;
+}
+.wrap-context-soccer > footer .clear-button {
+  width: 5.6rem;
+  height: 2.7rem;
+  line-height: 2.7rem;
+  background: #7A7977;
+  font-size: 1.3rem;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-align: center;
+}
+.wrap-context-soccer > footer .select-info {
+  padding: 0.5rem 9rem 0 9rem;
+}
+.wrap-context-soccer > footer .select-info span:nth-child(1) {
+  color: #fff;
+  font-size: 1.6rem;
+  height: 2rem;
+  line-height: 2rem;
+  display: block;
+  text-align: center;
+}
+.wrap-context-soccer > footer .select-info span:nth-child(2) {
+  color: #999999;
+  font-size: 1.2rem;
+  height: 2rem;
+  line-height: 2rem;
+  display: block;
+  text-align: center;
+}
+.wrap-context-soccer > footer .buy-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #D62222;
+  width: 9rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.7rem;
+}
+.wrap-context-soccer > footer .buy-button span {
+  vertical-align: middle;
+}
